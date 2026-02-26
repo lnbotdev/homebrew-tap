@@ -11,7 +11,7 @@ class Lnbot < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/lnbotdev/cli/releases/download/v0.1.0/lnbot_darwin_amd64.tar.gz"
-      sha256 "1448afc7ed28580585a9d6126c1ef4025f434b9c5aa156431c3d1eec3a50a14a"
+      sha256 "cdd4a40b31e628982eb0d7270d979fc213433b2c5d65b2d175c5c79fe977f399"
 
       define_method(:install) do
         bin.install "lnbot"
@@ -19,7 +19,7 @@ class Lnbot < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/lnbotdev/cli/releases/download/v0.1.0/lnbot_darwin_arm64.tar.gz"
-      sha256 "376eba5de6599fae2069bdfedadf96064db8f7ee72ab836672975e14dd77d47a"
+      sha256 "f584a43536a38ee37c02b8326a27c022d5c632d711e66d15ef071d929fe41e2a"
 
       define_method(:install) do
         bin.install "lnbot"
@@ -30,14 +30,14 @@ class Lnbot < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/lnbotdev/cli/releases/download/v0.1.0/lnbot_linux_amd64.tar.gz"
-      sha256 "fcfca76d824116286443194b26e29c50f1b1f9bc4945fbf1f38f4da7e15c682e"
+      sha256 "08a2224f106d95696050be5db9bbc748278821ee9480fbfdc33674fbb584f7ed"
       define_method(:install) do
         bin.install "lnbot"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/lnbotdev/cli/releases/download/v0.1.0/lnbot_linux_arm64.tar.gz"
-      sha256 "ddc1f4d1b37be36e64e64f2d2c8b2cbe43381a4418a8e8e8949866950ff1b6ea"
+      sha256 "87c63f276e88496d9c625c7d530085f8f5becfb1695ce352aa29bdb16f7c204c"
       define_method(:install) do
         bin.install "lnbot"
       end
