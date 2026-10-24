@@ -5,21 +5,21 @@
 class Lnbot < Formula
   desc "Lightning wallets for agents — CLI"
   homepage "https://ln.bot"
-  version "1.1.0"
+  version "1.1.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/lnbotdev/cli/releases/download/v1.1.0/lnbot_darwin_amd64.tar.gz"
-      sha256 "6d4f87af679ed7e7d5d9e2a0903cfc0205c60198f62ed95d29b98b8a529d4928"
+      url "https://github.com/lnbotdev/cli/releases/download/v1.1.1/lnbot_darwin_amd64.tar.gz"
+      sha256 "88fd02302653e483ba45f2c18ab2d43981070cbdb650c17c93e15e3a565e3b03"
 
       define_method(:install) do
         bin.install "lnbot"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/lnbotdev/cli/releases/download/v1.1.0/lnbot_darwin_arm64.tar.gz"
-      sha256 "b24fb7492f7357c4c65058e9719758ad50ecc620e2e04f36dfe41173ad2efa66"
+      url "https://github.com/lnbotdev/cli/releases/download/v1.1.1/lnbot_darwin_arm64.tar.gz"
+      sha256 "a6031971e9e96a7c59a18af05ef2acc7de7cfda8facaffcc3d2f76a54a5c5753"
 
       define_method(:install) do
         bin.install "lnbot"
@@ -29,15 +29,15 @@ class Lnbot < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/lnbotdev/cli/releases/download/v1.1.0/lnbot_linux_amd64.tar.gz"
-      sha256 "5b55b7f6538b81eaeaa2a8a020ad590a699fb6e6b41745ee8d830f16dc43aed6"
+      url "https://github.com/lnbotdev/cli/releases/download/v1.1.1/lnbot_linux_amd64.tar.gz"
+      sha256 "400dd98e1f244bdbbda846a1f5f0a92423846d381fa449c5a851f66708fd43ce"
       define_method(:install) do
         bin.install "lnbot"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/lnbotdev/cli/releases/download/v1.1.0/lnbot_linux_arm64.tar.gz"
-      sha256 "06e298b763255e5123a351689e95a7bcb5a820203ae5d50952ecad5a3f820553"
+      url "https://github.com/lnbotdev/cli/releases/download/v1.1.1/lnbot_linux_arm64.tar.gz"
+      sha256 "3bb03501c6a023a589ff792be7b97dde3279df09baf9444826da1d87b228a675"
       define_method(:install) do
         bin.install "lnbot"
       end
